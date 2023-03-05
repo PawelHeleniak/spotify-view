@@ -1,2 +1,79 @@
 /// Homepage Styles File
 /// Here we import all the Styles files we need for our Homepage.
+
+$black: #000000;
+$black-70: #000000b3;
+$black-50: #00000080;
+$black-20: #00000033;
+$gray-dark: #121212;
+$gray-blue: #18181c;
+$gray: #292929;
+$white: #fff;
+$green: #65d36e;
+
+p,
+h1 {
+  color: $white;
+}
+header {
+  position: relative;
+  background-image: url("/public/images/header.jpg");
+  background-size: cover;
+  background-position: right;
+  padding: 217px 0;
+
+  .header-content {
+    bottom: 0;
+    position: absolute;
+    height: max-content;
+    .header-info {
+      margin: 32px 27px 32px 32px;
+      z-index: 2;
+      p {
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 48px;
+        margin: 16px 0;
+        letter-spacing: -0.4px;
+      }
+      .header-description {
+        p {
+          color: #bfbfbf;
+          letter-spacing: -0.4px;
+        }
+      }
+    }
+  }
+}
+.nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: $black-50;
+  z-index: 1;
+  .nav-left-arrow {
+    padding: 19px 16px;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: max-content;
+      border-radius: 200px;
+      background-color: $black-50;
+      img {
+        padding: 14px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+main {
+  background-color: $black;
+  height: 150vh;
+  .options-play {
+    background-color: $green;
+    padding: 20px;
+  }
+}
