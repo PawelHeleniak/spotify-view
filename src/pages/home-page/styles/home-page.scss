@@ -1,6 +1,7 @@
 /// Homepage Styles File
 /// Here we import all the Styles files we need for our Homepage.
 
+//Variables
 $black: #000000;
 $black-70: #000000b3;
 $black-50: #00000080;
@@ -8,9 +9,23 @@ $black-20: #00000033;
 $gray-dark: #121212;
 $gray-blue: #18181c;
 $gray: #292929;
+$gray-light: #444444;
 $white: #fff;
 $green: #65d36e;
 
+//Media
+@mixin desktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: 834px) {
+    @content;
+  }
+}
+
+//Homepage
 p {
   color: $white;
   margin: 0;
@@ -28,19 +43,22 @@ header {
   padding: 217px 0;
 
   .header-content {
-    bottom: 0;
+    bottom: 32px;
+    left: 32px;
     position: absolute;
     height: max-content;
     .header-info {
-      margin: 32px 27px 32px 32px;
+      width: 316px;
       z-index: 2;
       p {
         font-size: 16px;
+        letter-spacing: -0.52px;
       }
       h1 {
         font-size: 48px;
-        margin: 16px 0;
+        margin: 16px 74px 16px 0;
         line-height: 100%;
+        letter-spacing: -1.5px;
       }
       .header-desc {
         p {
@@ -51,8 +69,8 @@ header {
     }
   }
 }
-// --- Nav ---
-.nav {
+// --- Nav Top---
+.nav-top {
   position: sticky;
   top: 0;
   width: 100%;
@@ -144,6 +162,16 @@ main {
       padding: 17px 24px 16px 24px;
       border-radius: 17px;
       margin-bottom: 16px;
+
+      &.active {
+        background-color: $gray-light;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:hover {
+        background-color: $gray;
+      }
       .music-list-box-wrapper {
         display: flex;
         align-items: center;
@@ -175,6 +203,59 @@ main {
       .music-list-box-menu {
         img {
           width: 36px;
+        }
+      }
+    }
+  }
+}
+
+// --- Nav Bottom ---
+.nav-bottom {
+  display: none;
+  a {
+    &:hover {
+      span {
+        color: $white;
+      }
+    }
+  }
+}
+@include tablet {
+  .nav-bottom {
+    justify-content: center;
+    display: flex;
+    position: sticky;
+    bottom: 0;
+
+    background-color: $black;
+    .nav-bottom-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 19px 103px 19px 0;
+      &:last-child {
+        padding-right: 0;
+      }
+      .nav-bottom-container-icon {
+        &.active {
+          a {
+            color: #fff;
+          }
+        }
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-decoration: none;
+          color: #bfbfbf;
+          span {
+            font-weight: 700;
+            font-size: 12px;
+          }
+          svg {
+            margin-bottom: 10px;
+          }
         }
       }
     }
