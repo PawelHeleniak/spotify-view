@@ -1,0 +1,420 @@
+body {
+  background-color: #121212;
+}
+
+#home-page {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+p {
+  color: #fff;
+  margin: 0;
+}
+
+h1 {
+  color: #fff;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+header {
+  position: relative;
+  background-image: url("./public/images/header.jpg");
+  background-size: cover;
+  background-position: right;
+  padding: 217px 0;
+}
+header .header-content {
+  bottom: 32px;
+  left: 32px;
+  position: absolute;
+  height: -moz-max-content;
+  height: max-content;
+}
+header .header-content .header-info {
+  width: 316px;
+  z-index: 2;
+}
+header .header-content .header-info p {
+  font-size: 16px;
+  letter-spacing: -0.52px;
+}
+header .header-content .header-info h1 {
+  font-size: 48px;
+  margin: 16px 74px 16px 0;
+  line-height: 100%;
+  letter-spacing: -1.5px;
+}
+header .header-content .header-info .header-desc p {
+  color: #bfbfbf;
+  letter-spacing: -0.52px;
+}
+
+@media (min-width: 1440px) {
+  header .header-content {
+    bottom: 32px;
+    left: 32px;
+  }
+  header .header-content .header-info {
+    width: 360px;
+  }
+  header .header-content .header-info p {
+    font-size: 18px;
+  }
+  header .header-content .header-info h1 {
+    font-size: 68px;
+    margin: 24px 10px 24px 0;
+  }
+}
+.nav-top {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  z-index: 1;
+}
+.nav-top .nav-left-arrow {
+  padding: 19px 16px;
+}
+.nav-top .nav-left-arrow a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 200px;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+}
+.nav-top .nav-left-arrow a img {
+  padding: 14px;
+  width: 18px;
+  height: 18px;
+}
+
+main {
+  background-color: #000000;
+  padding: 24px 16px;
+}
+main .options-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+main .options-container div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 32px;
+}
+main .options-container div:last-child {
+  margin-right: 0;
+}
+main .options-container div.options-container-play button {
+  display: flex;
+  align-items: center;
+  background-color: #65d36e;
+  border: none;
+  border-radius: 200px;
+  margin: 0;
+  padding: 17px;
+}
+main .options-container div.options-container-play button img {
+  width: 21px;
+}
+main .options-container div.options-container-like button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+main .options-container div.options-container-like button img {
+  width: 26px;
+}
+main .options-container div.options-container-menu button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+main .options-container div.options-container-menu button img {
+  width: 46px;
+}
+main .music-list {
+  width: 100%;
+}
+main .music-list .music-list-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #18181c;
+  padding: 17px 24px 16px 24px;
+  border-radius: 17px;
+  margin-bottom: 16px;
+}
+main .music-list .music-list-box:last-child {
+  margin-bottom: 0;
+}
+main .music-list .music-list-box:hover {
+  background-color: #292929;
+}
+main .music-list .music-list-box.active {
+  background-color: #444444;
+}
+main .music-list .music-list-box .music-list-box-wrapper {
+  display: flex;
+  align-items: center;
+}
+main .music-list .music-list-box .music-list-box-wrapper.artists {
+  display: none;
+}
+main .music-list .music-list-box .music-list-box-wrapper.time {
+  display: none;
+}
+main
+  .music-list
+  .music-list-box
+  .music-list-box-wrapper
+  .music-list-box-number
+  p {
+  font-size: 18px;
+  color: #bfbfbf;
+}
+main .music-list .music-list-box .music-list-box-wrapper .music-list-box-img {
+  padding: 0 24px;
+  height: 56px;
+}
+main
+  .music-list
+  .music-list-box
+  .music-list-box-wrapper
+  .music-list-box-img
+  img {
+  border-radius: 8px;
+  width: 56px;
+}
+main
+  .music-list
+  .music-list-box
+  .music-list-box-wrapper
+  .music-list-box-info
+  .music-album {
+  margin-bottom: 6px;
+}
+main
+  .music-list
+  .music-list-box
+  .music-list-box-wrapper
+  .music-list-box-info
+  .music-album
+  p {
+  font-size: 14px;
+  color: #bfbfbf;
+}
+main .music-list .music-list-box .music-list-box-menu {
+  position: relative;
+}
+main .music-list .music-list-box .music-list-box-menu button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+main .music-list .music-list-box .music-list-box-menu button img {
+  width: 36px;
+}
+main .music-list .music-list-box .music-list-box-menu .drop-down-menu {
+  display: none;
+}
+main .music-list .music-list-box .music-list-box-menu .drop-down-menu.active {
+  display: none;
+  position: absolute;
+  inset: 130% 0px auto auto;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #292929;
+  z-index: 99;
+}
+main
+  .music-list
+  .music-list-box
+  .music-list-box-menu
+  .drop-down-menu.active
+  .menu-items {
+  position: relative;
+  border-bottom: 1px solid #3d3d3d;
+}
+main
+  .music-list
+  .music-list-box
+  .music-list-box-menu
+  .drop-down-menu.active
+  .menu-items:last-child {
+  border: none;
+}
+main
+  .music-list
+  .music-list-box
+  .music-list-box-menu
+  .drop-down-menu.active
+  .menu-items
+  a,
+main
+  .music-list
+  .music-list-box
+  .music-list-box-menu
+  .drop-down-menu.active
+  .menu-items
+  button {
+  cursor: default;
+  display: inline-block;
+  text-align: start;
+  width: 100%;
+  font-size: 14px;
+  padding: 9px 16px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+main
+  .music-list
+  .music-list-box
+  .music-list-box-menu
+  .drop-down-menu.active
+  .menu-items
+  a:last-child,
+main
+  .music-list
+  .music-list-box
+  .music-list-box-menu
+  .drop-down-menu.active
+  .menu-items
+  button:last-child {
+  padding-bottom: 16px;
+}
+main
+  .music-list
+  .music-list-box
+  .music-list-box-menu
+  .drop-down-menu.active
+  .menu-items
+  a:first-child,
+main
+  .music-list
+  .music-list-box
+  .music-list-box-menu
+  .drop-down-menu.active
+  .menu-items
+  button:first-child {
+  padding-top: 16px;
+}
+main
+  .music-list
+  .music-list-box
+  .music-list-box-menu
+  .drop-down-menu.active
+  .menu-items
+  a:hover,
+main
+  .music-list
+  .music-list-box
+  .music-list-box-menu
+  .drop-down-menu.active
+  .menu-items
+  button:hover {
+  background-color: #3d3d3d;
+  padding: 16px;
+}
+
+@media (min-width: 834px) {
+  main .music-list .music-list-box {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 17px 51px 16px 50px;
+  }
+  main .music-list .music-list-box .music-list-box-wrapper.artists {
+    display: flex;
+  }
+  main .music-list .music-list-box .music-list-box-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 1440px) {
+  main {
+    background-color: #121212;
+    padding: 32px 50px;
+  }
+  main .options-container {
+    margin-bottom: 32px;
+  }
+  main .options-container div.options-container-play button img {
+    width: 21px;
+  }
+  main .options-container div.options-container-like button img {
+    width: 32px;
+  }
+  main .options-container div.options-container-menu button img {
+    width: 52px;
+  }
+  main .music-list .music-list-box {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+  }
+  main .music-list .music-list-box .music-list-box-wrapper.time {
+    display: flex;
+  }
+}
+.nav-bottom {
+  display: none;
+}
+.nav-bottom a:hover span {
+  color: #fff;
+}
+
+@media (min-width: 834px) {
+  .nav-bottom {
+    justify-content: center;
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    background-color: #000000;
+  }
+  .nav-bottom .nav-bottom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 19px 103px 19px 0;
+  }
+  .nav-bottom .nav-bottom-container:last-child {
+    padding-right: 0;
+  }
+  .nav-bottom .nav-bottom-container .nav-bottom-container-icon.active a {
+    color: #fff;
+  }
+  .nav-bottom .nav-bottom-container .nav-bottom-container-icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: #bfbfbf;
+  }
+  .nav-bottom .nav-bottom-container .nav-bottom-container-icon a span {
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .nav-bottom .nav-bottom-container .nav-bottom-container-icon a svg {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  .nav-bottom {
+    display: none;
+  }
+} /*# sourceMappingURL=home-page.css.map */
