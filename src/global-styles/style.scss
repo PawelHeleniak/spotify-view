@@ -4,7 +4,9 @@
 @import "styles/normalize.scss";
 @import "styles/root.scss";
 @import "styles/fonts.scss";
-
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "Lato", sans-serif;
   color: var(--color-primary);
