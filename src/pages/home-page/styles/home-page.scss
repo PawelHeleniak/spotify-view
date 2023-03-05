@@ -162,7 +162,6 @@ main {
       padding: 17px 24px 16px 24px;
       border-radius: 17px;
       margin-bottom: 16px;
-
       &.active {
         background-color: $gray-light;
       }
@@ -190,7 +189,7 @@ main {
           }
         }
         .music-list-box-info {
-          .music-title {
+          .music-album {
             margin-bottom: 6px;
             p {
               font-size: 14px;
@@ -208,7 +207,20 @@ main {
     }
   }
 }
-
+@include tablet {
+  main {
+    .music-list {
+      .music-list-box {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        .music-list-box-menu {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
 // --- Nav Bottom ---
 .nav-bottom {
   display: none;
