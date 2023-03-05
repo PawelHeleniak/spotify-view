@@ -18,6 +18,7 @@
   <!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
 
   <body>
+    <!-- HEADER -->
     <div id="home-page">
       <header class="header">
         <div class="header-content">
@@ -39,7 +40,10 @@
           <a href="#"><img src="/public/images/right-arrow.png" alt="" /></a>
         </div>
       </nav> -->
+
+      <!-- MAIN -->
       <main>
+        <!-- Options section -->
         <section class="options-container">
           <div class="options-container-play">
             <button type="button">
@@ -57,8 +61,10 @@
             </button>
           </div>
         </section>
+        <!-- Music section -->
         <section class="music-list">
-          <div class="music-list-box active">
+          <!-- music-list-box 1 -->
+          <div class="music-list-box">
             <div class="music-list-box-wrapper">
               <div class="music-list-box-number"><p>01</p></div>
               <div class="music-list-box-img">
@@ -94,9 +100,28 @@
               </div>
             </div>
             <div class="music-list-box-menu">
-              <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              <button type="button" class="menu-button">
+                <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              </button>
+              <div class="drop-down-menu">
+                <div class="menu-items">
+                  <a href="#">Add to queue</a>
+                  <a href="#">Go to the track</a>
+                  <a href="#">Go to the artist</a>
+                  <a href="#">Go to album</a>
+                  <a href="#">Show content authors</a>
+                </div>
+                <div class="menu-items">
+                  <button type="button">Add to playlist</button>
+                  <button type="button">Show content authors</button>
+                </div>
+                <div class="menu-items">
+                  <button type="button">Share</button>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- music-list-box 2 -->
           <div class="music-list-box">
             <div class="music-list-box-wrapper">
               <div class="music-list-box-number"><p>02</p></div>
@@ -133,9 +158,12 @@
               </div>
             </div>
             <div class="music-list-box-menu">
-              <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              <button type="button" class="menu-button">
+                <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              </button>
             </div>
           </div>
+          <!-- music-list-box 3 -->
           <div class="music-list-box">
             <div class="music-list-box-wrapper">
               <div class="music-list-box-number"><p>03</p></div>
@@ -172,9 +200,12 @@
               </div>
             </div>
             <div class="music-list-box-menu">
-              <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              <button type="button" class="menu-button">
+                <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              </button>
             </div>
           </div>
+          <!-- music-list-box 4 -->
           <div class="music-list-box">
             <div class="music-list-box-wrapper">
               <div class="music-list-box-number"><p>04</p></div>
@@ -211,9 +242,12 @@
               </div>
             </div>
             <div class="music-list-box-menu">
-              <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              <button type="button" class="menu-button">
+                <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              </button>
             </div>
           </div>
+          <!-- music-list-box 5 -->
           <div class="music-list-box">
             <div class="music-list-box-wrapper">
               <div class="music-list-box-number"><p>05</p></div>
@@ -250,9 +284,12 @@
               </div>
             </div>
             <div class="music-list-box-menu">
-              <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              <button type="button" class="menu-button">
+                <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              </button>
             </div>
           </div>
+          <!-- music-list-box 6 -->
           <div class="music-list-box">
             <div class="music-list-box-wrapper">
               <div class="music-list-box-number"><p>06</p></div>
@@ -289,9 +326,12 @@
               </div>
             </div>
             <div class="music-list-box-menu">
-              <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              <button type="button" class="menu-button">
+                <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              </button>
             </div>
           </div>
+          <!-- music-list-box 7 -->
           <div class="music-list-box">
             <div class="music-list-box-wrapper">
               <div class="music-list-box-number"><p>07</p></div>
@@ -328,9 +368,12 @@
               </div>
             </div>
             <div class="music-list-box-menu">
-              <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              <button type="button" class="menu-button">
+                <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              </button>
             </div>
           </div>
+          <!-- music-list-box 8 -->
           <div class="music-list-box">
             <div class="music-list-box-wrapper">
               <div class="music-list-box-number"><p>08</p></div>
@@ -367,11 +410,15 @@
               </div>
             </div>
             <div class="music-list-box-menu">
-              <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              <button type="button" class="menu-button">
+                <img src="/public/images/more-menu-vertical-line.png" alt="" />
+              </button>
             </div>
           </div>
         </section>
       </main>
+
+      <!-- NAV bottom section (tablet) -->
       <nav class="nav-bottom">
         <div class="nav-bottom-container">
           <div class="nav-bottom-container-icon active">
@@ -480,6 +527,7 @@
           </div>
         </div>
       </nav>
+      <!-- FOOTER  -->
     </div>
 
     <script type="module" src="/src/global-scripts/main.js"></script>

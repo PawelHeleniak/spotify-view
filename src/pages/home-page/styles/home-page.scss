@@ -1,6 +1,5 @@
 /// Homepage Styles File
 /// Here we import all the Styles files we need for our Homepage.
-
 //Variables
 $black: #000000;
 $black-70: #000000b3;
@@ -26,6 +25,14 @@ $green: #65d36e;
 }
 
 //Homepage
+body {
+  background-color: $gray-dark;
+}
+#home-page {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 p {
   color: $white;
   margin: 0;
@@ -33,7 +40,9 @@ p {
 h1 {
   color: $white;
 }
-
+.hidden {
+  visibility: hidden;
+}
 // --- Header ---
 header {
   position: relative;
@@ -180,14 +189,14 @@ main {
       padding: 17px 24px 16px 24px;
       border-radius: 17px;
       margin-bottom: 16px;
-      &.active {
-        background-color: $gray-light;
-      }
       &:last-child {
         margin-bottom: 0;
       }
       &:hover {
         background-color: $gray;
+      }
+      &.active {
+        background-color: $gray-light;
       }
       .music-list-box-wrapper {
         display: flex;
@@ -223,8 +232,56 @@ main {
         }
       }
       .music-list-box-menu {
-        img {
-          width: 36px;
+        position: relative;
+        button {
+          background-color: transparent;
+          border: none;
+          padding: 0;
+          margin: 0;
+          img {
+            width: 36px;
+          }
+        }
+        .drop-down-menu {
+          display: none;
+          &.active {
+            display: none;
+            position: absolute;
+            inset: 130% 0px auto auto;
+            padding: 16px;
+            border-radius: 8px;
+            background-color: $gray;
+            z-index: 99;
+            .menu-items {
+              position: relative;
+              border-bottom: 1px solid #3d3d3d;
+              &:last-child {
+                border: none;
+              }
+              a,
+              button {
+                cursor: default;
+                display: inline-block;
+                text-align: start;
+                width: 100%;
+                font-size: 14px;
+                padding: 9px 16px;
+                border-radius: 8px;
+                color: $white;
+                text-decoration: none;
+                &:last-child {
+                  padding-bottom: 16px;
+                }
+                &:first-child {
+                  padding-top: 16px;
+                }
+                &:hover {
+                  background-color: #3d3d3d;
+                  padding: 16px;
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -253,7 +310,9 @@ main {
 @include desktop {
   main {
     background-color: $gray-dark;
+    padding: 32px 50px;
     .options-container {
+      margin-bottom: 32px;
       div {
         &.options-container-play {
           button {
