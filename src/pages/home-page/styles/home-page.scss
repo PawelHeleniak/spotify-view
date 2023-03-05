@@ -69,6 +69,24 @@ header {
     }
   }
 }
+@include desktop {
+  header {
+    .header-content {
+      bottom: 32px;
+      left: 32px;
+      .header-info {
+        width: 360px;
+        p {
+          font-size: 18px;
+        }
+        h1 {
+          font-size: 68px;
+          margin: 24px 10px 24px 0;
+        }
+      }
+    }
+  }
+}
 // --- Nav Top---
 .nav-top {
   position: sticky;
@@ -174,6 +192,12 @@ main {
       .music-list-box-wrapper {
         display: flex;
         align-items: center;
+        &.artists {
+          display: none;
+        }
+        &.time {
+          display: none;
+        }
         .music-list-box-number {
           p {
             font-size: 18px;
@@ -198,7 +222,6 @@ main {
           }
         }
       }
-
       .music-list-box-menu {
         img {
           width: 36px;
@@ -213,9 +236,56 @@ main {
       .music-list-box {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
+        padding: 17px 51px 16px 50px;
+        .music-list-box-wrapper {
+          &.artists {
+            display: flex;
+          }
+        }
         .music-list-box-menu {
           display: flex;
           justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+@include desktop {
+  main {
+    background-color: $gray-dark;
+    .options-container {
+      div {
+        &.options-container-play {
+          button {
+            img {
+              width: 21px;
+            }
+          }
+        }
+        &.options-container-like {
+          button {
+            img {
+              width: 32px;
+            }
+          }
+        }
+        &.options-container-menu {
+          button {
+            img {
+              width: 52px;
+            }
+          }
+        }
+      }
+    }
+    .music-list {
+      .music-list-box {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr 1fr;
+        .music-list-box-wrapper {
+          &.time {
+            display: flex;
+          }
         }
       }
     }
@@ -271,5 +341,10 @@ main {
         }
       }
     }
+  }
+}
+@include desktop {
+  .nav-bottom {
+    display: none;
   }
 }
