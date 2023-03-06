@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  margin: 0 auto;
 }
 
 body {
@@ -10,8 +9,8 @@ body {
 
 #home-page {
   max-width: 1440px;
-  margin: 0 auto;
   position: relative;
+  margin: 0 auto;
 }
 
 p {
@@ -29,7 +28,7 @@ h1 {
 
 header {
   position: relative;
-  background-image: url("/spotify-view/public/images/header.jpg");
+  background-image: url("/public/images/header.jpg");
   background-size: cover;
   background-position: right;
   padding: 217px 0;
@@ -37,6 +36,7 @@ header {
 header .header-nav {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5019607843);
   z-index: 1;
