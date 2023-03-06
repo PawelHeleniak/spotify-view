@@ -25,12 +25,18 @@ $green: #65d36e;
 }
 
 //Homepage
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
 body {
+  font-family: "Lato", sans-serif;
   background-color: $gray-dark;
 }
 #home-page {
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
 }
 
 p {
@@ -46,11 +52,40 @@ h1 {
 // --- Header ---
 header {
   position: relative;
-  background-image: url("/public/images/header.jpg");
+  background-image: url("/spotify-view/public/images/header.jpg");
   background-size: cover;
   background-position: right;
   padding: 217px 0;
-
+  // --- Nav Top---
+  .header-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $black-50;
+    z-index: 1;
+    .header-nav-icon {
+      padding: 19px 16px;
+      display: flex;
+      .header-nav-icon-right {
+        display: none;
+      }
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        border-radius: 200px;
+        padding: 14px;
+        background-color: $black-50;
+        cursor: not-allowed;
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+  // ---
   .header-content {
     bottom: 32px;
     left: 32px;
@@ -80,6 +115,14 @@ header {
 }
 @include desktop {
   header {
+    .header-nav {
+      .header-nav-icon {
+        .header-nav-icon-right {
+          display: block;
+          margin-left: 24px;
+        }
+      }
+    }
     .header-content {
       bottom: 32px;
       left: 32px;
@@ -92,30 +135,6 @@ header {
           font-size: 68px;
           margin: 24px 10px 24px 0;
         }
-      }
-    }
-  }
-}
-// --- Nav Top---
-.nav-top {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: $black-50;
-  z-index: 1;
-  .nav-left-arrow {
-    padding: 19px 16px;
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: max-content;
-      border-radius: 200px;
-      background-color: $black-50;
-      img {
-        padding: 14px;
-        width: 18px;
-        height: 18px;
       }
     }
   }
