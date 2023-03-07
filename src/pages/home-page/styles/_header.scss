@@ -1,0 +1,95 @@
+@use "./mixins" as mix;
+
+header {
+  position: relative;
+  background-image: url("/spotify-view/public/images/header.jpg");
+  background-size: cover;
+  background-position: right;
+  padding: 217px 0;
+  // --- Nav Top---
+  .header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--black-50);
+    z-index: 1;
+    .header-nav-icon {
+      padding: 19px 16px;
+      display: flex;
+      margin: 0 auto;
+      max-width: 1440px;
+
+      .header-nav-icon-right {
+        display: none;
+      }
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        border-radius: 200px;
+        padding: 14px;
+        background-color: var(--black-50);
+        cursor: not-allowed;
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+  // ---
+  .header-content {
+    bottom: 32px;
+    left: 32px;
+    position: absolute;
+    height: max-content;
+    .header-info {
+      width: 316px;
+      z-index: 2;
+      p {
+        font-size: 16px;
+        letter-spacing: -0.52px;
+      }
+      h1 {
+        font-size: 48px;
+        margin: 16px 74px 16px 0;
+        line-height: 100%;
+        letter-spacing: -1.5px;
+      }
+      .header-desc {
+        p {
+          color: #bfbfbf;
+          letter-spacing: -0.52px;
+        }
+      }
+    }
+  }
+}
+@include mix.desktop {
+  header {
+    .header-nav {
+      .header-nav-icon {
+        .header-nav-icon-right {
+          display: block;
+          margin-left: 24px;
+        }
+      }
+    }
+    .header-content {
+      bottom: 32px;
+      left: 32px;
+      .header-info {
+        width: 360px;
+        p {
+          font-size: 18px;
+        }
+        h1 {
+          font-size: 68px;
+          margin: 24px 10px 24px 0;
+        }
+      }
+    }
+  }
+}

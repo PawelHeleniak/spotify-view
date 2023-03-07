@@ -1,0 +1,58 @@
+@use "./mixins" as mix;
+
+.nav-bottom {
+  display: none;
+  a {
+    &:hover {
+      span {
+        color: var(--white);
+      }
+    }
+  }
+}
+@include mix.tablet {
+  .nav-bottom {
+    justify-content: center;
+    display: flex;
+    position: sticky;
+    bottom: 0;
+
+    background-color: var(--black);
+    .nav-bottom-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 19px 103px 19px 0;
+      &:last-child {
+        padding-right: 0;
+      }
+      .nav-bottom-container-icon {
+        &.active {
+          a {
+            color: #fff;
+          }
+        }
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-decoration: none;
+          color: #bfbfbf;
+          span {
+            font-weight: 700;
+            font-size: 12px;
+          }
+          svg {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@include mix.desktop {
+  .nav-bottom {
+    display: none;
+  }
+}

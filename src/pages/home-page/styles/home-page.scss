@@ -1,28 +1,8 @@
-/// Homepage Styles File
-/// Here we import all the Styles files we need for our Homepage.
-//Variables
-$black: #000000;
-$black-70: #000000b3;
-$black-50: #00000080;
-$black-20: #00000033;
-$gray-dark: #121212;
-$gray-blue: #18181c;
-$gray: #292929;
-$gray-light: #444444;
-$white: #fff;
-$green: #65d36e;
-
-//Media
-@mixin desktop {
-  @media (min-width: 1440px) {
-    @content;
-  }
-}
-@mixin tablet {
-  @media (min-width: 834px) {
-    @content;
-  }
-}
+//Main css
+@use "./mixins" as mix;
+@use "./variables" as *;
+@use "./header" as *;
+@use "./nav-bottom" as *;
 
 //Homepage
 * {
@@ -30,7 +10,7 @@ $green: #65d36e;
 }
 body {
   font-family: "Lato", sans-serif;
-  background-color: $gray-dark;
+  background-color: var(--gray-dark);
 }
 #home-page {
   max-width: 1440px;
@@ -39,110 +19,19 @@ body {
 }
 
 p {
-  color: $white;
+  color: var(--white);
   margin: 0;
 }
 h1 {
-  color: $white;
+  color: var(--white);
 }
 .hidden {
   visibility: hidden;
 }
-// --- Header ---
-header {
-  position: relative;
-  background-image: url("/spotify-view/public/images/header.jpg");
-  background-size: cover;
-  background-position: right;
-  padding: 217px 0;
-  // --- Nav Top---
-  .header-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: $black-50;
-    z-index: 1;
-    .header-nav-icon {
-      padding: 19px 16px;
-      display: flex;
-      .header-nav-icon-right {
-        display: none;
-      }
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: max-content;
-        border-radius: 200px;
-        padding: 14px;
-        background-color: $black-50;
-        cursor: not-allowed;
-        img {
-          width: 18px;
-          height: 18px;
-        }
-      }
-    }
-  }
-  // ---
-  .header-content {
-    bottom: 32px;
-    left: 32px;
-    position: absolute;
-    height: max-content;
-    .header-info {
-      width: 316px;
-      z-index: 2;
-      p {
-        font-size: 16px;
-        letter-spacing: -0.52px;
-      }
-      h1 {
-        font-size: 48px;
-        margin: 16px 74px 16px 0;
-        line-height: 100%;
-        letter-spacing: -1.5px;
-      }
-      .header-desc {
-        p {
-          color: #bfbfbf;
-          letter-spacing: -0.52px;
-        }
-      }
-    }
-  }
-}
-@include desktop {
-  header {
-    .header-nav {
-      .header-nav-icon {
-        .header-nav-icon-right {
-          display: block;
-          margin-left: 24px;
-        }
-      }
-    }
-    .header-content {
-      bottom: 32px;
-      left: 32px;
-      .header-info {
-        width: 360px;
-        p {
-          font-size: 18px;
-        }
-        h1 {
-          font-size: 68px;
-          margin: 24px 10px 24px 0;
-        }
-      }
-    }
-  }
-}
 
 // --- Main ---
 main {
-  background-color: $black;
+  background-color: var(--black);
   padding: 24px 16px;
   .options-container {
     display: flex;
@@ -160,7 +49,7 @@ main {
         button {
           display: flex;
           align-items: center;
-          background-color: $green;
+          background-color: var(--green);
           border: none;
           border-radius: 200px;
           margin: 0;
@@ -204,7 +93,7 @@ main {
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      background-color: $gray-blue;
+      background-color: var(--green-blue);
       padding: 17px 24px 16px 24px;
       border-radius: 17px;
       margin-bottom: 16px;
@@ -212,10 +101,10 @@ main {
         margin-bottom: 0;
       }
       &:hover {
-        background-color: $gray;
+        background-color: var(--gray);
       }
       &.active {
-        background-color: $gray-light;
+        background-color: var(--gray-light);
       }
       .music-list-box-wrapper {
         display: flex;
@@ -269,7 +158,7 @@ main {
             inset: 130% 0px auto auto;
             padding: 16px;
             border-radius: 8px;
-            background-color: $gray;
+            background-color: var(--gray);
             z-index: 99;
             .menu-items {
               position: relative;
@@ -286,7 +175,7 @@ main {
                 font-size: 14px;
                 padding: 9px 16px;
                 border-radius: 8px;
-                color: $white;
+                color: var(--white);
                 text-decoration: none;
                 &:last-child {
                   padding-bottom: 16px;
@@ -306,7 +195,7 @@ main {
     }
   }
 }
-@include tablet {
+@include mix.tablet {
   main {
     .music-list {
       .music-list-box {
@@ -326,9 +215,9 @@ main {
     }
   }
 }
-@include desktop {
+@include mix.desktop {
   main {
-    background-color: $gray-dark;
+    background-color: var(--gray-dark);
     padding: 32px 50px;
     .options-container {
       margin-bottom: 32px;
@@ -367,62 +256,5 @@ main {
         }
       }
     }
-  }
-}
-// --- Nav Bottom ---
-.nav-bottom {
-  display: none;
-  a {
-    &:hover {
-      span {
-        color: $white;
-      }
-    }
-  }
-}
-@include tablet {
-  .nav-bottom {
-    justify-content: center;
-    display: flex;
-    position: sticky;
-    bottom: 0;
-
-    background-color: $black;
-    .nav-bottom-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 19px 103px 19px 0;
-      &:last-child {
-        padding-right: 0;
-      }
-      .nav-bottom-container-icon {
-        &.active {
-          a {
-            color: #fff;
-          }
-        }
-        a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          text-decoration: none;
-          color: #bfbfbf;
-          span {
-            font-weight: 700;
-            font-size: 12px;
-          }
-          svg {
-            margin-bottom: 10px;
-          }
-        }
-      }
-    }
-  }
-}
-@include desktop {
-  .nav-bottom {
-    display: none;
   }
 }
